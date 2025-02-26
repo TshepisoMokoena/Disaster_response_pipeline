@@ -70,3 +70,25 @@ To run the project, follow these steps:
    ```sh
    python3 data/process_data.py data/messages.csv data/categories.csv data/DisasterResponse.db
    ```
+2. Run the command to run the classifier trainer and save the model. This will also save the classifier metrics.
+```sh
+python3 models/train_classifier.py data/DisasterResponse.DB models/new_best_model.plk
+```
+3. lastly run to view the web app and start classifying messages. The terminal will display ip where you can click and the web app will be shown in the default browser.
+```sh
+python3 app/app.py 
+```
+
+## Model Performance and Improvments
+
+The trained model achieved an overall accuracy of 0.95 on the test set. However, due to imbalanced training data, this metric may not fully reflect real-world performance. The recall score of 0.55 suggests moderate performance in identifying true positives.
+
+### Potential Improvements:
+
+ - Handling Imbalanced Data: Applying Synthetic Minority Over-sampling Technique (SMOTE) to increase instances of underrepresented categories or downsampling dominant cases.
+
+ - Feature Engineering: Exploring advanced NLP techniques such as TF-IDF or word embeddings to improve text classification.
+
+ - Hyperparameter Tuning: Further optimizing model parameters to enhance classification accuracy.
+
+By addressing these aspects, the model can improve its reliability and effectiveness in real-world disaster response scenarios.
