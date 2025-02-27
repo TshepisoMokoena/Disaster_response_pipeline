@@ -1,5 +1,8 @@
 # Disaster_response_pipeline
 
+## Repository
+[GitHub Repository](https://github.com/TshepisoMokoena/Disaster_response_pipeline)
+
 # Table of Contents
 1. [Project Overview](#project-overview)
 2. [Required Libraries](#required-libraries)
@@ -39,29 +42,29 @@ To run this project, the following packages and libraries are required:
 - **pickle**: Saving and loading the trained model.
 - **Flask**: Web application framework.
 - **Plotly**: Interactive data visualization.
-- **Custom Modules**: `data_wrangling`, `data_clean`, and `data_saver` (included in the project files).
+- **Custom Modules**: data_wrangling, data_clean, and data_saver (included in the project files).
 
 ## Project Structure
 
 ### Root Directory:
 - **App/**
-  - `templates/`
-    - `go.html`: Displays model predictions.
-    - `master.html`: Main web app page with data visualizations.
-  - `app.py`: Flask application for the web interface.
+  - templates/
+    - go.html: Displays model predictions.
+    - master.html: Main web app page with data visualizations.
+  - app.py: Flask application for the web interface.
 
 - **Data/**
-  - `categories.csv`: Raw category data.
-  - `messages.csv`: Raw messages data.
-  - `data_clean.py`: Cleans duplicate and irrelevant data.
-  - `data_wrangling.py`: Processes and transforms data.
-  - `Disaster.db`: SQLite database for storing cleaned data.
-  - `process_data.py`: Executes data processing and storage.
+  - categories.csv: Raw category data.
+  - messages.csv: Raw messages data.
+  - data_clean.py: Cleans duplicate and irrelevant data.
+  - data_wrangling.py: Processes and transforms data.
+  - Disaster.db: SQLite database for storing cleaned data.
+  - process_data.py: Executes data processing and storage.
 
 - **Models/**
-  - `data_saver.py`: Module for saving data into the database.
-  - `new_best_model.pkl`: Trained model saved using Pickle.
-  - `train_classifier.py`: Script to train and save the classifier model.
+  - data_saver.py: Module for saving data into the database.
+  - new_best_model.pkl: Trained model saved using Pickle.
+  - train_classifier.py: Script to train and save the classifier model.
 
 ## Running the Project
 To run the project, follow these steps:
@@ -71,15 +74,15 @@ To run the project, follow these steps:
    python3 data/process_data.py data/messages.csv data/categories.csv data/DisasterResponse.db
    ```
 2. Run the command to run the classifier trainer and save the model. This will also save the classifier metrics.
-```sh
-python3 models/train_classifier.py data/DisasterResponse.DB models/best_model.plk
-```
-3. lastly run to view the web app and start classifying messages. The terminal will display ip where you can click and the web app will be shown in the default browser.
-```sh
-python3 app/app.py 
-```
+   ```sh
+   python3 models/train_classifier.py data/DisasterResponse.DB models/best_model.plk
+   ```
+3. Lastly, run to view the web app and start classifying messages. The terminal will display an IP where you can click and the web app will be shown in the default browser.
+   ```sh
+   python3 app/app.py
+   ```
 
-## Model Performance and Improvments
+## Model Performance and Improvements
 
 The trained model achieved an overall accuracy of 0.95 on the test set. However, due to imbalanced training data, this metric may not fully reflect real-world performance. The recall score of 0.55 suggests moderate performance in identifying true positives.
 
@@ -92,3 +95,4 @@ The trained model achieved an overall accuracy of 0.95 on the test set. However,
  - Hyperparameter Tuning: Further optimizing model parameters to enhance classification accuracy.
 
 By addressing these aspects, the model can improve its reliability and effectiveness in real-world disaster response scenarios.
+
