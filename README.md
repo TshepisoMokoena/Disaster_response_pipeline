@@ -72,7 +72,7 @@ To run the project, follow these steps:
    ```
 2. Run the command to run the classifier trainer and save the model. This will also save the classifier metrics.
 ```sh
-python3 models/train_classifier.py data/DisasterResponse.DB models/new_best_model.plk
+python3 models/train_classifier.py data/DisasterResponse.DB models/best_model.plk
 ```
 3. lastly run to view the web app and start classifying messages. The terminal will display ip where you can click and the web app will be shown in the default browser.
 ```sh
